@@ -2,7 +2,7 @@ License
 
 This software includes code originally written by the FIKA dev team and adapted to fit into this software. Attributions are noted in the code where used.
 
-Copyright (c) 2024 William Whatley
+Copyright (c) 2024 [RenegadeActual](https://github.com/RenegadeActual)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
