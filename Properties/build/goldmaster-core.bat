@@ -4,6 +4,6 @@
 call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
 cd ../Build/BepInEx/plugins
-sn -Ra Fika.Core.dll ../../../Properties/signing/private.snk
+sn -Ra Renegade.Core.dll ../../../Properties/signing/private.snk
 
 pause
