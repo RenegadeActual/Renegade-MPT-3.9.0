@@ -19,6 +19,7 @@ namespace Renegade.Core;
 [BepInDependency("com.SPT.singleplayer", BepInDependency.DependencyFlags.HardDependency)] // This is used so that we guarantee to load after spt-singleplayer, that way we can disable its patches
 [BepInDependency("com.SPT.core", BepInDependency.DependencyFlags.HardDependency)] // This is used so that we guarantee to load after spt-core, that way we can disable its patches
 [BepInDependency("com.SPT.debugging", BepInDependency.DependencyFlags.HardDependency)] // This is used so that we guarantee to load after spt-debugging, that way we can disable its patches
+// Hard Dependencies for AKI here to ensure we can overwrite the patches (after AKI 3.9.0 comes out of Alpha
 public class RenegadePlugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
@@ -35,5 +36,9 @@ public class RenegadePlugin : BaseUnityPlugin
         Logger.LogInfo($"======================================================");
 
         new RenegadeVersionLabel_Patch().Enable();
+        // TOS_Patch
+        // Trader_Patch
+        // Music_Patch
+        // SplashScreen_Patch
     }
 }
