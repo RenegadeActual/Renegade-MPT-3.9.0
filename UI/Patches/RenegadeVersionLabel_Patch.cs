@@ -23,9 +23,6 @@ namespace Renegade.Core.UI
         [PatchPostfix]
         internal static void PatchPostfix(string major, object __result)
         {
-            /// <summary>
-            /// Portions of this patch were originally writen by the FIKA dev team and adapted to fit the mod
-            /// </summary>
             RenegadePlugin.EFTVersionMajor = major;
 
             if (string.IsNullOrEmpty(versionLabel))

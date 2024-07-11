@@ -1,7 +1,7 @@
 @echo off
 set outputFile=%1
 set sourceDir=%2
-set buildDir=%sourceDir%..\Build
+set buildDir=%sourceDir%..\build
 set bepinexDir=%buildDir%\BepInEx
 set pluginsDir=%bepinexDir%\plugins
 

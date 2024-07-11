@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using UnityEngine;
 using Renegade.Core.UI;
+using Renegade.Core.UI.Patches;
 
 namespace Renegade.Core;
 
@@ -25,9 +26,14 @@ public class RenegadePlugin : BaseUnityPlugin
     internal static new ManualLogSource Logger;
     public static RenegadePlugin Instance;
     public static string EFTVersionMajor { get; internal set; }
+    public ManualLogSource RenegadeLogger => Logger;
+
+    // Hidden
+    public static ConfigEntry<bool> AcceptedTOS { get; set; }
 
     protected void Awake()
     {
+        Instance = this;
         // Plugin startup logic
         Logger = base.Logger;
         Logger.LogInfo($"===================RENEGADE.CORE {MyPluginInfo.PLUGIN_VERSION}=======================");
@@ -36,7 +42,7 @@ public class RenegadePlugin : BaseUnityPlugin
         Logger.LogInfo($"======================================================");
 
         new RenegadeVersionLabel_Patch().Enable();
-        // TOS_Patch
+        //new TOS_Patch().Enable(); Still need to implement this
         // Trader_Patch
         // Music_Patch
         // SplashScreen_Patch
